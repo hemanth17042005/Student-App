@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #c9d6ff, #e2e2e2);
+      color: #333;
+    }
+    .header {
+      background: linear-gradient(to right, #007bff, #0056b3);
+      border-bottom: 4px solid #003974;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      height: 70px;
+      margin-right: 15px;
+      border-radius: 10px;
+    }
+    .navbar a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+    .navbar a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    .user-info {
+      font-weight: 600;
+    }
+    .main-content {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px;
+      gap: 30px;
+      justify-content: center;
+    }
+    .profile-section, .notifications {
+      background: #ffffffdd;
+      border-radius: 16px;
+      padding: 30px;
+      flex: 1;
+      min-width: 320px;
+      max-width: 500px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(4px);
+    }
+    .profile-pic {
+      width: 160px;
+      height: 210px;
+      object-fit: cover;
+      border: 3px solid #003974;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .profile-details h2 {
+      color: #003974;
+      margin-top: 0;
+    }
+    .btn-progress {
+      background: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .btn-progress:hover {
+      background: #218838;
+    }
+    .notifications h2 {
+      color: #ff5722;
+      font-weight: 700;
+    }
+    .notifications ul {
+      list-style: none;
+      padding: 0;
+    }
+    .notifications li {
+      margin: 12px 0;
+      font-size: 16px;
+    }
+    .notifications a {
+      text-decoration: none;
+      color: #003974;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    .notifications a:hover {
+      color: #ff5722;
+    }
+    .new {
+      background: #d32f2f;
+      color: white;
+      padding: 3px 7px;
+      font-size: 11px;
+      margin-left: 6px;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    input[type="text"] {
+      padding: 6px;
+      font-size: 14px;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+    }
+    button {
+      margin-left: 8px;
+      padding: 6px 12px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    button:hover {
+      background-color: #388e3c;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="christ.jpg" alt="University Logo">
+      <h1>CHRIST (Deemed to be University)</h1>
+    </div>
+    <nav class="navbar">
+      <a href="#">Home</a>
+      <a href="#">Attendance</a>
+      <a href="#">Downloads</a>
+      <a href="#">Apply Online</a>
+      <a href="#">Student Support</a>
+      <span class="user-info">Welcome : <strong>2345</strong> | <a href="#">Sign out</a></span>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <section class="profile-section">
+      <img class="profile-pic" src="pk8.jpg" alt="Student Photo">
+      <div class="profile-details">
+        <h2>Profile</h2>
+        <p><strong>Name:</strong> HEMANTH REDDY</p>
+        <p><strong>Class:</strong> 5th sem</p>
+        <p><strong>Mobile No:</strong> <input type="text" id="mobile" value="9212"> <button onclick="editMobile()">Edit</button></p>
+        <p><strong>Bank AccNo:</strong> xxxxxxx </p>
+        <button class="btn-progress">Academic Progression</button>
+      </div>
+    </section>
+
+    <section class="notifications">
+      <h2><span class="icon">🔔</span> Notifications</h2>
+      <ul>
+        <li><a href="#">Scholarship Details <span class="new">NEW</span></a></li>
+        <li><a href="#">Student Satisfaction Survey <span class="new">NEW</span></a></li>
+        <li><a href="#">Student Grievance</a></li>
+        <li><a href="#">Student Handbook 2025-26 <span class="new">NEW</span></a></li>
+        <li><a href="#">Scholarship Notice 2025</a></li>
+        <li><a href="#">Annual Fee Payment <span class="new">NEW</span></a></li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    function editMobile() {
+      const input = document.getElementById("mobile");
+      input.disabled = !input.disabled;
+      alert("You can now edit your mobile number.");
+    }
+  </script>
+</body>
+</html>
